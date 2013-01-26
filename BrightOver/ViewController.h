@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+    __weak IBOutlet UISlider *bSlider;
+}
+- (IBAction)bChanged:(id)sender;
+- (IBAction)bFullAct:(id)sender;
+- (IBAction)bUpAct:(id)sender;
+- (IBAction)bDownAct:(id)sender;
 @end
