@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 {
     __weak IBOutlet UISlider *bSlider;
+    float currentValue;
 }
 - (IBAction)bChanged:(id)sender;
 - (IBAction)bFullAct:(id)sender;
