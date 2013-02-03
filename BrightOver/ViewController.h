@@ -13,8 +13,9 @@
     __weak IBOutlet UISlider *bSlider;
     float currentValue;
 }
+- (IBAction)bLowestAct:(id)sender;
 - (IBAction)bChanged:(id)sender;
-- (IBAction)bFullAct:(id)sender;
+- (IBAction)bHighestAct:(id)sender;
 - (IBAction)bUpAct:(id)sender;
 - (IBAction)bDownAct:(id)sender;
 @end
