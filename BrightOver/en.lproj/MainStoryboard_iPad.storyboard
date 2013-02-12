@@ -14,9 +14,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRn-QK-Bfe">
                                 <accessibility key="accessibilityConfiguration" label="Decrease brightness"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="WTH-YB-gUh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <color key="tintColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="-">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -28,7 +32,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-8h-UL7">
                                 <accessibility key="accessibilityConfiguration" label="Increase brightness"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="vhm-T6-jlH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,6 +87,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tbb-8h-UL7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0O0-3w-Hsb"/>
                             <constraint firstItem="ydN-vV-Wkg" firstAttribute="centerY" secondItem="5" secondAttribute="centerY" type="user" id="2Pg-g2-R1E"/>
+                            <constraint firstItem="tbb-8h-UL7" firstAttribute="baseline" secondItem="pRn-QK-Bfe" secondAttribute="baseline" type="default" id="3sb-3d-IbO"/>
                             <constraint firstItem="J2Y-xD-IfM" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="6oz-cg-iQF"/>
                             <constraint firstItem="pRn-QK-Bfe" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="982-q9-dBL"/>
                             <constraint firstItem="tbb-8h-UL7" firstAttribute="leading" secondItem="EYJ-Cr-ZLp" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9QJ-ZW-EGk"/>
@@ -86,10 +95,9 @@
                             <constraint firstItem="ydN-vV-Wkg" firstAttribute="top" secondItem="5" secondAttribute="top" constant="103" type="user" id="DOq-ks-gUK"/>
                             <constraint firstItem="pRn-QK-Bfe" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EOT-lv-rFk"/>
                             <constraint firstItem="EYJ-Cr-ZLp" firstAttribute="leading" secondItem="pRn-QK-Bfe" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EzH-VN-VZ5"/>
+                            <constraint firstItem="EYJ-Cr-ZLp" firstAttribute="centerY" secondItem="pRn-QK-Bfe" secondAttribute="centerY" type="default" id="IhU-JS-fMS"/>
                             <constraint firstAttribute="bottom" secondItem="ydN-vV-Wkg" secondAttribute="bottom" constant="103" type="user" id="Ooi-oY-Xxg"/>
                             <constraint firstItem="ydN-vV-Wkg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5" secondAttribute="leading" constant="20" type="user" id="PfO-il-o8L"/>
-                            <constraint firstItem="tbb-8h-UL7" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="S1w-Ff-dIi"/>
-                            <constraint firstItem="EYJ-Cr-ZLp" firstAttribute="top" secondItem="5" secondAttribute="top" constant="31" id="kbI-M9-deK"/>
                             <constraint firstItem="J2Y-xD-IfM" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="knO-Yn-jNR"/>
                             <constraint firstItem="J2Y-xD-IfM" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="nkH-xD-ZDU"/>
                             <constraint firstAttribute="trailing" secondItem="ydN-vV-Wkg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pd8-Cg-A5L"/>
@@ -98,6 +106,8 @@
                     </view>
                     <connections>
                         <outlet property="bSlider" destination="EYJ-Cr-ZLp" id="MSX-90-q8U"/>
+                        <outlet property="decButton" destination="pRn-QK-Bfe" id="ajj-Dl-18p"/>
+                        <outlet property="inButton" destination="tbb-8h-UL7" id="K8A-wY-7Pt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>

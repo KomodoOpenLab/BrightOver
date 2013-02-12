@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 {
+    NSTimer *scanning;
+    __weak IBOutlet UIButton *inButton;
+    __weak IBOutlet UIButton *decButton;
     __weak IBOutlet UISlider *bSlider;
     float currentValue;
 }
