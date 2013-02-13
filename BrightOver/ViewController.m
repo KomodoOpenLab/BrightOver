@@ -54,6 +54,11 @@
         [bSlider setValue:currentValue];
         [UIScreen mainScreen].brightness = bSlider.value;
     }
+    if (currentValue == 0.0) {
+        [bSlider setValue:0.5];
+        [UIScreen mainScreen].brightness = bSlider.value;
+        currentValue = bSlider.value;
+    }
 }
 
 - (IBAction)bChanged:(id)sender {
@@ -70,6 +75,11 @@
     else {
         [bSlider setValue:currentValue];
         [UIScreen mainScreen].brightness = bSlider.value;
+    }
+    if (currentValue == 1.0) {
+        [bSlider setValue:0.5];
+        [UIScreen mainScreen].brightness = bSlider.value;
+        currentValue = bSlider.value;
     }
 }
 

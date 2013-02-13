@@ -18,7 +18,6 @@
                                     <constraint firstAttribute="width" constant="29" id="WTH-YB-gUh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <color key="tintColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,7 +35,6 @@
                                     <constraint firstAttribute="height" constant="41" id="vhm-T6-jlH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
