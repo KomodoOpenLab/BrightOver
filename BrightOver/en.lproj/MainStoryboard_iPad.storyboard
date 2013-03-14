@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,13 +12,12 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRn-QK-Bfe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pRn-QK-Bfe" customClass="CustomButton">
+                                <rect key="frame" x="20" y="20" width="29" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Decrease brightness"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="WTH-YB-gUh"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="-">
+                                <state key="normal" title="-" backgroundImage="normalButton.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -29,13 +28,12 @@
                                     <action selector="bDownAct:" destination="2" eventType="touchUpInside" id="aNa-OS-GPx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-8h-UL7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tbb-8h-UL7" customClass="CustomButton">
+                                <rect key="frame" x="715" y="22" width="33" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Increase brightness"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="vhm-T6-jlH"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="+">
+                                <state key="normal" title="+" backgroundImage="normalButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,7 +44,9 @@
                                     <action selector="bUpAct:" destination="2" eventType="touchUpInside" id="jWq-3N-qqO"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EYJ-Cr-ZLp">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="EYJ-Cr-ZLp">
+                                <rect key="frame" x="55" y="31" width="654" height="23"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
@@ -54,7 +54,9 @@
                                     <action selector="bChanged:" destination="2" eventType="valueChanged" id="MtI-TO-QSL"/>
                                 </connections>
                             </slider>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2Y-xD-IfM">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="J2Y-xD-IfM">
+                                <rect key="frame" x="0.0" y="960" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Lowest" id="pc8-Uh-nfd">
                                         <connections>
@@ -69,38 +71,18 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="BrightOver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydN-vV-Wkg">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="BrightOver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ydN-vV-Wkg">
+                                <rect key="frame" x="20" y="103" width="728" height="798"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="798" type="user" id="3XI-da-CXr"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="100"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tbb-8h-UL7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0O0-3w-Hsb"/>
-                            <constraint firstItem="ydN-vV-Wkg" firstAttribute="centerY" secondItem="5" secondAttribute="centerY" type="user" id="2Pg-g2-R1E"/>
-                            <constraint firstItem="tbb-8h-UL7" firstAttribute="baseline" secondItem="pRn-QK-Bfe" secondAttribute="baseline" type="default" id="3sb-3d-IbO"/>
-                            <constraint firstItem="J2Y-xD-IfM" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="6oz-cg-iQF"/>
-                            <constraint firstItem="pRn-QK-Bfe" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="982-q9-dBL"/>
-                            <constraint firstItem="tbb-8h-UL7" firstAttribute="leading" secondItem="EYJ-Cr-ZLp" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9QJ-ZW-EGk"/>
-                            <constraint firstItem="ydN-vV-Wkg" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CPf-ae-j2w"/>
-                            <constraint firstItem="ydN-vV-Wkg" firstAttribute="top" secondItem="5" secondAttribute="top" constant="103" type="user" id="DOq-ks-gUK"/>
-                            <constraint firstItem="pRn-QK-Bfe" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EOT-lv-rFk"/>
-                            <constraint firstItem="EYJ-Cr-ZLp" firstAttribute="leading" secondItem="pRn-QK-Bfe" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EzH-VN-VZ5"/>
-                            <constraint firstItem="EYJ-Cr-ZLp" firstAttribute="centerY" secondItem="pRn-QK-Bfe" secondAttribute="centerY" type="default" id="IhU-JS-fMS"/>
-                            <constraint firstAttribute="bottom" secondItem="ydN-vV-Wkg" secondAttribute="bottom" constant="103" type="user" id="Ooi-oY-Xxg"/>
-                            <constraint firstItem="ydN-vV-Wkg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5" secondAttribute="leading" constant="20" type="user" id="PfO-il-o8L"/>
-                            <constraint firstItem="J2Y-xD-IfM" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="knO-Yn-jNR"/>
-                            <constraint firstItem="J2Y-xD-IfM" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="nkH-xD-ZDU"/>
-                            <constraint firstAttribute="trailing" secondItem="ydN-vV-Wkg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pd8-Cg-A5L"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ydN-vV-Wkg" secondAttribute="trailing" constant="20" type="user" id="pxs-Ck-PBa"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bSlider" destination="EYJ-Cr-ZLp" id="MSX-90-q8U"/>
@@ -112,6 +94,27 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="normalButton.png" width="700" height="400"/>
+    </resources>
+    <classes>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bChanged:"/>
+                <relationship kind="action" name="bDownAct:"/>
+                <relationship kind="action" name="bHighestAct:"/>
+                <relationship kind="action" name="bLowestAct:"/>
+                <relationship kind="action" name="bUpAct:"/>
+                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="decButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="inButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
