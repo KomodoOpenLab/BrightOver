@@ -10,14 +10,27 @@
 
 @interface ViewController : UIViewController
 {
-    __weak IBOutlet UIButton *inButton;
-    __weak IBOutlet UIButton *decButton;
+	
+	
+	// outlets
+	
     __weak IBOutlet UISlider *bSlider;
+	
+	
+	// variables
+	
     float currentValue;
+	
+	
 }
-- (IBAction)bLowestAct:(id)sender;
+
+
+// actions
+
 - (IBAction)bChanged:(id)sender;
-- (IBAction)bHighestAct:(id)sender;
+- (IBAction)bFullAct:(id)sender;
 - (IBAction)bUpAct:(id)sender;
 - (IBAction)bDownAct:(id)sender;
+
+
 @end
