@@ -31,6 +31,9 @@
 		5A2BDF1B16F2696A008D38B1 /* icon-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1516F2696A008D38B1 /* icon-iphone.png */; };
 		5A2BDF1C16F2696A008D38B1 /* icon-iphone-ret.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1616F2696A008D38B1 /* icon-iphone-ret.png */; };
 		5A2BDF1D16F2696A008D38B1 /* normalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1716F2696A008D38B1 /* normalButton.png */; };
+		F099ED6D16FA217300F0BC50 /* BrightHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = F099ED6C16FA217300F0BC50 /* BrightHigh.png */; };
+		F099ED6F16FA2AEE00F0BC50 /* BrightFull.png in Resources */ = {isa = PBXBuildFile; fileRef = F099ED6E16FA2AEE00F0BC50 /* BrightFull.png */; };
+		F099ED7316FA307C00F0BC50 /* BrightLow.png in Resources */ = {isa = PBXBuildFile; fileRef = F099ED7216FA307C00F0BC50 /* BrightLow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		5A2BDF1516F2696A008D38B1 /* icon-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iphone.png"; sourceTree = "<group>"; };
 		5A2BDF1616F2696A008D38B1 /* icon-iphone-ret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iphone-ret.png"; sourceTree = "<group>"; };
 		5A2BDF1716F2696A008D38B1 /* normalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalButton.png; sourceTree = "<group>"; };
+		F099ED6C16FA217300F0BC50 /* BrightHigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrightHigh.png; sourceTree = "<group>"; };
+		F099ED6E16FA2AEE00F0BC50 /* BrightFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrightFull.png; sourceTree = "<group>"; };
+		F099ED7216FA307C00F0BC50 /* BrightLow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrightLow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,9 @@
 		5A0DCB1A16AB27A600B9D26E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F099ED7216FA307C00F0BC50 /* BrightLow.png */,
+				F099ED6E16FA2AEE00F0BC50 /* BrightFull.png */,
+				F099ED6C16FA217300F0BC50 /* BrightHigh.png */,
 				5A2BDF1216F2696A008D38B1 /* highlightedButton.png */,
 				5A2BDF1316F2696A008D38B1 /* icon-ipad.png */,
 				5A2BDF1416F2696A008D38B1 /* icon-ipad-ret.png */,
@@ -269,6 +278,9 @@
 				5A2BDF1B16F2696A008D38B1 /* icon-iphone.png in Resources */,
 				5A2BDF1C16F2696A008D38B1 /* icon-iphone-ret.png in Resources */,
 				5A2BDF1D16F2696A008D38B1 /* normalButton.png in Resources */,
+				F099ED6D16FA217300F0BC50 /* BrightHigh.png in Resources */,
+				F099ED6F16FA2AEE00F0BC50 /* BrightFull.png in Resources */,
+				F099ED7316FA307C00F0BC50 /* BrightLow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
