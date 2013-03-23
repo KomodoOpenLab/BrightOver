@@ -28,29 +28,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)bLowestAct:(id)sender {
-    if (bSlider.value > 0.0) {
-        currentValue = bSlider.value;
-        [bSlider setValue:0.0];
-        [UIScreen mainScreen].brightness = bSlider.value;
-    }
-    else {
-        [bSlider setValue:currentValue];
-        [UIScreen mainScreen].brightness = bSlider.value;
-    }
-    if (currentValue == 0.0) {
-        [bSlider setValue:0.5];
-        [UIScreen mainScreen].brightness = bSlider.value;
-        currentValue = bSlider.value;
-    }
-}
-
 - (IBAction)bChanged:(id)sender {
     [UIScreen mainScreen].brightness = bSlider.value;
     currentValue = bSlider.value;
 }
 
-- (IBAction)bHighestAct:(id)sender {
+
+
+
+
+
+
+
+// button actions
+
+- (IBAction)bFullAct:(id)sender {
     if (bSlider.value < 1.0) {
         currentValue = bSlider.value;
         [bSlider setValue:1.0];
