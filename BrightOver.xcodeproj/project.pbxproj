@@ -414,7 +414,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "18C52CD5-285A-460D-AD5A-824138FD0284";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18C52CD5-285A-460D-AD5A-824138FD0284";
@@ -435,17 +435,17 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mauricio Meza (6EN3SUVW2E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mauricio Meza (6EN3SUVW2E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mauricio Meza";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mauricio Meza";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "18C52CD5-285A-460D-AD5A-824138FD0284";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18C52CD5-285A-460D-AD5A-824138FD0284";
+				PROVISIONING_PROFILE = "A4005480-C96C-4933-9E39-BE5E8FF85BDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A4005480-C96C-4933-9E39-BE5E8FF85BDF";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -508,6 +508,63 @@
 			};
 			name = Release;
 		};
+		F0880CFB170B3B250091D579 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mauricio Meza";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mauricio Meza";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "A4005480-C96C-4933-9E39-BE5E8FF85BDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A4005480-C96C-4933-9E39-BE5E8FF85BDF";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F0880CFC170B3B250091D579 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
+				INFOPLIST_FILE = "BrightOver/BrightOver-Info.plist";
+				PRODUCT_NAME = brightover;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		F0880CFD170B3B250091D579 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BrightOver.app/BrightOver";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
+				INFOPLIST_FILE = "BrightOverTests/BrightOverTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +573,7 @@
 			buildConfigurations = (
 				5A0DCB4916AB27A700B9D26E /* Debug */,
 				5A0DCB4A16AB27A700B9D26E /* Release */,
+				F0880CFB170B3B250091D579 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -525,6 +583,7 @@
 			buildConfigurations = (
 				5A0DCB4C16AB27A700B9D26E /* Debug */,
 				5A0DCB4D16AB27A700B9D26E /* Release */,
+				F0880CFC170B3B250091D579 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -534,6 +593,7 @@
 			buildConfigurations = (
 				5A0DCB4F16AB27A700B9D26E /* Debug */,
 				5A0DCB5016AB27A700B9D26E /* Release */,
+				F0880CFD170B3B250091D579 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
