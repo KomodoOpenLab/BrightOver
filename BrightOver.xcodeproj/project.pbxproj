@@ -50,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A0DCB1016AB27A600B9D26E /* BrightOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0DCB1016AB27A600B9D26E /* brightover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brightover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0DCB1316AB27A600B9D26E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5A0DCB1516AB27A600B9D26E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A0DCB1716AB27A600B9D26E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,7 +126,7 @@
 		5A0DCB1116AB27A600B9D26E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A0DCB1016AB27A600B9D26E /* BrightOver.app */,
+				5A0DCB1016AB27A600B9D26E /* brightover.app */,
 				5A0DCB3916AB27A700B9D26E /* BrightOverTests.octest */,
 			);
 			name = Products;
@@ -221,7 +221,7 @@
 			);
 			name = BrightOver;
 			productName = BrightOver;
-			productReference = 5A0DCB1016AB27A600B9D26E /* BrightOver.app */;
+			productReference = 5A0DCB1016AB27A600B9D26E /* brightover.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5A0DCB3816AB27A700B9D26E /* BrightOverTests */ = {
@@ -400,7 +400,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mauricio Meza (6EN3SUVW2E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mauricio Meza (6EN3SUVW2E)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -415,6 +416,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "18C52CD5-285A-460D-AD5A-824138FD0284";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18C52CD5-285A-460D-AD5A-824138FD0284";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -432,7 +435,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mauricio Meza (6EN3SUVW2E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mauricio Meza (6EN3SUVW2E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -440,6 +444,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "18C52CD5-285A-460D-AD5A-824138FD0284";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18C52CD5-285A-460D-AD5A-824138FD0284";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -452,7 +458,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
 				INFOPLIST_FILE = "BrightOver/BrightOver-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = brightover;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -463,7 +469,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
 				INFOPLIST_FILE = "BrightOver/BrightOver-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = brightover;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
