@@ -107,7 +107,6 @@
                 <relationship kind="action" name="bDownAct:"/>
                 <relationship kind="action" name="bFullAct:"/>
                 <relationship kind="action" name="bUpAct:"/>
-                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
             </relationships>
         </class>
     </classes>

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/CALayer.h>
+#import "CustomButton.h"
 
 @interface ViewController : UIViewController
 {
@@ -15,8 +17,9 @@
 	// outlets
 	
     __weak IBOutlet UISlider *bSlider;
-	
-	
+    __weak IBOutlet CustomButton *lowerButton;
+    __weak IBOutlet CustomButton *higherButton;
+    __weak IBOutlet CustomButton *fullButton;
 	// variables
 	
     float currentValue;

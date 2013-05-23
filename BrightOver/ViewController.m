@@ -14,12 +14,21 @@
 
 @implementation ViewController
 
+- (void)makeButtonRound:(UIButton*)button
+{
+    [button.layer setCornerRadius:(lowerButton.frame.size.width/8.0)];
+    button.layer.masksToBounds = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [bSlider setValue:[UIScreen mainScreen].brightness];
     currentValue = bSlider.value;
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self makeButtonRound:lowerButton];
+    [self makeButtonRound:higherButton];
+    [self makeButtonRound:fullButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,9 +43,17 @@
 }
 
 
+- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight || interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
-
-
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    if (self.interfaceOrientation==UIInterfaceOrientationLandscapeLeft)
+    {
+        
+    }
+}
 
 
 
@@ -69,5 +86,11 @@
     [bSlider setValue:bSlider.value - 0.1];
     [UIScreen mainScreen].brightness = bSlider.value;
     currentValue = bSlider.value;
+}
+- (void)viewDidUnload {
+    lowerButton = nil;
+    higherButton = nil;
+    fullButton = nil;
+    [super viewDidUnload];
 }
 @end
