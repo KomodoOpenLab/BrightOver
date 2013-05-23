@@ -41,6 +41,9 @@
 		F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */; };
 		F0A10EF6174E486A009E001D /* brightover_icons_ipad_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */; };
 		F0A10EF8174E6FCD009E001D /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF7174E6FCD009E001D /* Default-Landscape.png */; };
+		F0A10F02174EA452009E001D /* brightover_icons_ipad_down_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EFF174EA452009E001D /* brightover_icons_ipad_down_focused.png */; };
+		F0A10F03174EA452009E001D /* brightover_icons_ipad_up_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10F00174EA452009E001D /* brightover_icons_ipad_up_focused.png */; };
+		F0A10F04174EA452009E001D /* brightover_icons_ipad_full_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10F01174EA452009E001D /* brightover_icons_ipad_full_focused.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_full.png; sourceTree = "<group>"; };
 		F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_up.png; sourceTree = "<group>"; };
 		F0A10EF7174E6FCD009E001D /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		F0A10EFF174EA452009E001D /* brightover_icons_ipad_down_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_down_focused.png; sourceTree = "<group>"; };
+		F0A10F00174EA452009E001D /* brightover_icons_ipad_up_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_up_focused.png; sourceTree = "<group>"; };
+		F0A10F01174EA452009E001D /* brightover_icons_ipad_full_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_full_focused.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,9 @@
 		5A0DCB1A16AB27A600B9D26E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0A10EFF174EA452009E001D /* brightover_icons_ipad_down_focused.png */,
+				F0A10F00174EA452009E001D /* brightover_icons_ipad_up_focused.png */,
+				F0A10F01174EA452009E001D /* brightover_icons_ipad_full_focused.png */,
 				F0A10EF1174E486A009E001D /* brightover_icons_ipad_down.png */,
 				F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */,
 				F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */,
@@ -309,6 +318,9 @@
 				F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */,
 				F0A10EF6174E486A009E001D /* brightover_icons_ipad_up.png in Resources */,
 				F0A10EF8174E6FCD009E001D /* Default-Landscape.png in Resources */,
+				F0A10F02174EA452009E001D /* brightover_icons_ipad_down_focused.png in Resources */,
+				F0A10F03174EA452009E001D /* brightover_icons_ipad_up_focused.png in Resources */,
+				F0A10F04174EA452009E001D /* brightover_icons_ipad_full_focused.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

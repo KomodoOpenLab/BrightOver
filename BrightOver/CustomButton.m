@@ -29,4 +29,9 @@
     self.highlighted = NO;
 }
 
+- (void)checkHighlight:(id)btn
+{
+        self.highlighted = [self accessibilityElementIsFocused];
+}
+
 @end

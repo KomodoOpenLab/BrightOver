@@ -79,18 +79,22 @@
         [UIScreen mainScreen].brightness = bSlider.value;
         currentValue = bSlider.value;
     }
+    
+    [sender performSelector:@selector(checkHighlight:) withObject:sender afterDelay:0];
 }
 
 - (IBAction)bUpAct:(id)sender {
     [bSlider setValue:bSlider.value + 0.1];
     [UIScreen mainScreen].brightness = bSlider.value;
     currentValue = bSlider.value;
+    [sender performSelector:@selector(checkHighlight:) withObject:sender afterDelay:0];
 }
 
 - (IBAction)bDownAct:(id)sender {
     [bSlider setValue:bSlider.value - 0.1];
     [UIScreen mainScreen].brightness = bSlider.value;
     currentValue = bSlider.value;
+    [sender performSelector:@selector(checkHighlight:) withObject:sender afterDelay:0];
 }
 - (void)viewDidUnload {
     lowerButton = nil;
