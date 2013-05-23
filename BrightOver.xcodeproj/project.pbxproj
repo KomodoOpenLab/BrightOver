@@ -40,6 +40,7 @@
 		F0A10EF4174E486A009E001D /* brightover_icons_ipad_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF1174E486A009E001D /* brightover_icons_ipad_down.png */; };
 		F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */; };
 		F0A10EF6174E486A009E001D /* brightover_icons_ipad_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */; };
+		F0A10EF8174E6FCD009E001D /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF7174E6FCD009E001D /* Default-Landscape.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		F0A10EF1174E486A009E001D /* brightover_icons_ipad_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_down.png; sourceTree = "<group>"; };
 		F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_full.png; sourceTree = "<group>"; };
 		F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_ipad_up.png; sourceTree = "<group>"; };
+		F0A10EF7174E6FCD009E001D /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				5A0DCB1F16AB27A600B9D26E /* main.m */,
 				5A0DCB2116AB27A600B9D26E /* BrightOver-Prefix.pch */,
 				5A0DCB2516AB27A600B9D26E /* Default.png */,
+				F0A10EF7174E6FCD009E001D /* Default-Landscape.png */,
 				5A0DCB2716AB27A600B9D26E /* Default@2x.png */,
 				5A0DCB2916AB27A700B9D26E /* Default-568h@2x.png */,
 			);
@@ -305,6 +308,7 @@
 				F0A10EF4174E486A009E001D /* brightover_icons_ipad_down.png in Resources */,
 				F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */,
 				F0A10EF6174E486A009E001D /* brightover_icons_ipad_up.png in Resources */,
+				F0A10EF8174E6FCD009E001D /* Default-Landscape.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

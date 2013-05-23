@@ -14,26 +14,30 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="Default.png" id="v7o-NA-LL8">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pRn-QK-Bfe" customClass="CustomButton">
-                                <rect key="frame" x="20" y="911" width="74" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="pRn-QK-Bfe" customClass="CustomButton">
+                                <rect key="frame" x="20" y="845" width="74" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.42745098039215684" green="0.66274509803921566" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Decrease brightness"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" image="brightover_icons_ipad_down.png" backgroundImage="normalButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" backgroundImage="highlightedButton.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="bDownAct:" destination="2" eventType="touchUpInside" id="aNa-OS-GPx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tbb-8h-UL7" customClass="CustomButton">
-                                <rect key="frame" x="592" y="911" width="74" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="tbb-8h-UL7" customClass="CustomButton">
+                                <rect key="frame" x="592" y="845" width="74" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Increase brightness"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -41,7 +45,7 @@
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" backgroundImage="highlightedButton.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -49,7 +53,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="EYJ-Cr-ZLp">
-                                <rect key="frame" x="100" y="937" width="486" height="23"/>
+                                <rect key="frame" x="100" y="871" width="486" height="23"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
@@ -58,8 +62,8 @@
                                     <action selector="bChanged:" destination="2" eventType="valueChanged" id="MtI-TO-QSL"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tNw-ng-VYz" customClass="CustomButton">
-                                <rect key="frame" x="674" y="911" width="74" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="tNw-ng-VYz" customClass="CustomButton">
+                                <rect key="frame" x="674" y="845" width="74" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Full brightness"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -67,18 +71,27 @@
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" backgroundImage="highlightedButton.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="bFullAct:" destination="2" eventType="touchUpInside" id="emf-bp-k3w"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="CUc-gB-o7h">
+                                <rect key="frame" x="0.0" y="961" width="768" height="15"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="bSlider" destination="EYJ-Cr-ZLp" id="MSX-90-q8U"/>
+                        <outlet property="backgroundView" destination="v7o-NA-LL8" id="YUO-5R-NJE"/>
                         <outlet property="fullButton" destination="tNw-ng-VYz" id="O6M-bJ-S6c"/>
                         <outlet property="higherButton" destination="tbb-8h-UL7" id="U4z-hl-pEU"/>
                         <outlet property="lowerButton" destination="pRn-QK-Bfe" id="hgH-Zr-IKR"/>
@@ -93,8 +106,28 @@
         <image name="brightover_icons_ipad_down.png" width="74" height="74"/>
         <image name="brightover_icons_ipad_full.png" width="74" height="74"/>
         <image name="brightover_icons_ipad_up.png" width="74" height="74"/>
+        <image name="highlightedButton.png" width="700" height="400"/>
         <image name="normalButton.png" width="700" height="400"/>
     </resources>
+    <classes>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bChanged:"/>
+                <relationship kind="action" name="bDownAct:"/>
+                <relationship kind="action" name="bFullAct:"/>
+                <relationship kind="action" name="bUpAct:"/>
+                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fullButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="higherButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="lowerButton" candidateClass="CustomButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

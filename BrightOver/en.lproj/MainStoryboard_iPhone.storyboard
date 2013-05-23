@@ -96,20 +96,6 @@
         <image name="BrightLow.png" width="17" height="17"/>
         <image name="normalButton.png" width="700" height="400"/>
     </resources>
-    <classes>
-        <class className="CustomButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="bChanged:"/>
-                <relationship kind="action" name="bDownAct:"/>
-                <relationship kind="action" name="bFullAct:"/>
-                <relationship kind="action" name="bUpAct:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

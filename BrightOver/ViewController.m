@@ -47,12 +47,17 @@
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight || interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    if (self.interfaceOrientation==UIInterfaceOrientationLandscapeLeft)
+    if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
     {
-        
+        backgroundView.image = [UIImage imageNamed:@"Default-Landscape.png"];
     }
+    else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
+    {
+        backgroundView.image = [UIImage imageNamed:@"Default.png"];
+    }
+
 }
 
 
@@ -91,6 +96,7 @@
     lowerButton = nil;
     higherButton = nil;
     fullButton = nil;
+    backgroundView = nil;
     [super viewDidUnload];
 }
 @end

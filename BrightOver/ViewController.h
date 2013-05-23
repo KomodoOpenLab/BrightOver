@@ -20,6 +20,7 @@
     __weak IBOutlet CustomButton *lowerButton;
     __weak IBOutlet CustomButton *higherButton;
     __weak IBOutlet CustomButton *fullButton;
+    __weak IBOutlet UIImageView *backgroundView;
 	// variables
 	
     float currentValue;
