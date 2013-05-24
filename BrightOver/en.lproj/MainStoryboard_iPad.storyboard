@@ -88,11 +88,11 @@
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="brightness_glow_icon_ipad.png" id="y7T-lL-2NI">
                                 <rect key="frame" x="114" y="186" width="540" height="540"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="brightness_normal_icon_ipad.png" id="UM7-tq-9Z8">
                                 <rect key="frame" x="114" y="186" width="540" height="540"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -101,6 +101,7 @@
                         <outlet property="bSlider" destination="EYJ-Cr-ZLp" id="MSX-90-q8U"/>
                         <outlet property="backgroundView" destination="v7o-NA-LL8" id="YUO-5R-NJE"/>
                         <outlet property="fullButton" destination="tNw-ng-VYz" id="O6M-bJ-S6c"/>
+                        <outlet property="glowImage" destination="y7T-lL-2NI" id="LEZ-tB-XzG"/>
                         <outlet property="higherButton" destination="tbb-8h-UL7" id="U4z-hl-pEU"/>
                         <outlet property="lowerButton" destination="pRn-QK-Bfe" id="hgH-Zr-IKR"/>
                     </connections>
@@ -136,6 +137,7 @@
                 <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fullButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="glowImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="higherButton" candidateClass="CustomButton"/>
                 <relationship kind="outlet" name="lowerButton" candidateClass="CustomButton"/>
             </relationships>

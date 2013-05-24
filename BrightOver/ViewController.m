@@ -8,6 +8,20 @@
 
 #import "ViewController.h"
 
+#define GLOW_STATE_LOW 0
+#define GLOW_STATE_RAMP_UP 1
+#define GLOW_STATE_HIGH 2
+#define GLOW_STATE_RAMP_DOWN 3
+
+#define GLOW_MIN_ALPHA 0.4
+#define GLOW_MAX_ALPHA 1.0
+
+//times are measured in 1/30 of a second
+#define GLOW_LOW_TIME 30
+#define GLOW_RAMP_UP_TIME 15
+#define GLOW_HIGH_TIME 10
+#define GLOW_RAMP_DOWN_TIME 15
+
 @interface ViewController ()
 
 @end
@@ -29,6 +43,56 @@
     [self makeButtonRound:lowerButton];
     [self makeButtonRound:higherButton];
     [self makeButtonRound:fullButton];
+    glowImage.alpha = GLOW_MIN_ALPHA;
+    nGlowState = GLOW_STATE_LOW;
+    nGlowTimerTick = 0;
+    [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
+}
+
+-(void)glowtimerfunc:(NSTimer*)theTimer
+{
+    nGlowTimerTick++;
+    switch (nGlowState)
+    {
+        case GLOW_STATE_LOW:
+            if (nGlowTimerTick>=GLOW_LOW_TIME)
+            {
+                nGlowState = GLOW_STATE_RAMP_UP;
+                nGlowTimerTick = 0;
+            }
+            break;
+        case GLOW_STATE_RAMP_UP:
+            if (nGlowTimerTick>=GLOW_RAMP_UP_TIME)
+            {
+                nGlowState = GLOW_STATE_HIGH;
+                nGlowTimerTick = 0;
+                glowImage.alpha = GLOW_MAX_ALPHA;
+            }
+            else
+            {
+                glowImage.alpha = GLOW_MIN_ALPHA + (float)nGlowTimerTick/(float)GLOW_RAMP_UP_TIME*(GLOW_MAX_ALPHA-GLOW_MIN_ALPHA);
+            }
+            break;
+        case GLOW_STATE_HIGH:
+            if (nGlowTimerTick>=GLOW_HIGH_TIME)
+            {
+                nGlowState = GLOW_STATE_RAMP_DOWN;
+                nGlowTimerTick = 0;
+            }
+            break;
+        case GLOW_STATE_RAMP_DOWN:
+            if (nGlowTimerTick>=GLOW_RAMP_DOWN_TIME)
+            {
+                nGlowState = GLOW_STATE_LOW;
+                nGlowTimerTick = 0;
+                glowImage.alpha = GLOW_MIN_ALPHA;
+            }
+            else
+            {
+                glowImage.alpha = GLOW_MAX_ALPHA - (float)nGlowTimerTick/(float)GLOW_RAMP_DOWN_TIME*(GLOW_MAX_ALPHA-GLOW_MIN_ALPHA);
+            }
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,6 +165,7 @@
     higherButton = nil;
     fullButton = nil;
     backgroundView = nil;
+    glowImage = nil;
     [super viewDidUnload];
 }
 @end

@@ -12,7 +12,8 @@
 
 @interface ViewController : UIViewController
 {
-	
+	int nGlowTimerTick;
+    int nGlowState;
 	
 	// outlets
 	
@@ -21,6 +22,7 @@
     __weak IBOutlet CustomButton *higherButton;
     __weak IBOutlet CustomButton *fullButton;
     __weak IBOutlet UIImageView *backgroundView;
+    __weak IBOutlet UIImageView *glowImage;
 	// variables
 	
     float currentValue;
