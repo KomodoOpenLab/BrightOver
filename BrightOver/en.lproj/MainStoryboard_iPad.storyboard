@@ -86,6 +86,14 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="brightness_glow_icon_ipad.png" id="y7T-lL-2NI">
+                                <rect key="frame" x="114" y="186" width="540" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="brightness_normal_icon_ipad.png" id="UM7-tq-9Z8">
+                                <rect key="frame" x="114" y="186" width="540" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -103,6 +111,8 @@
     </scenes>
     <resources>
         <image name="Default.png" width="768" height="1004"/>
+        <image name="brightness_glow_icon_ipad.png" width="544" height="540"/>
+        <image name="brightness_normal_icon_ipad.png" width="540" height="540"/>
         <image name="brightover_icons_ipad_down.png" width="74" height="74"/>
         <image name="brightover_icons_ipad_down_focused.png" width="74" height="74"/>
         <image name="brightover_icons_ipad_full.png" width="74" height="74"/>
@@ -112,6 +122,25 @@
         <image name="highlightedButton.png" width="700" height="400"/>
         <image name="normalButton.png" width="700" height="400"/>
     </resources>
+    <classes>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bChanged:"/>
+                <relationship kind="action" name="bDownAct:"/>
+                <relationship kind="action" name="bFullAct:"/>
+                <relationship kind="action" name="bUpAct:"/>
+                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fullButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="higherButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="lowerButton" candidateClass="CustomButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
