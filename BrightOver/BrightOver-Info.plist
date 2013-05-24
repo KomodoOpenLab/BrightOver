@@ -14,10 +14,10 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>icon-iphone.png</string>
-				<string>icon-iphone-ret.png</string>
-				<string>icon-ipad.png</string>
-				<string>icon-ipad-ret.png</string>
+				<string>Icon</string>
+				<string>Icon72</string>
+				<string>Icon-Small</string>
+				<string>Icon-Small-50</string>
 			</array>
 		</dict>
 	</dict>
@@ -55,10 +55,10 @@
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 </dict>
 </plist>
