@@ -8,18 +8,91 @@
 
 #import "ViewController.h"
 
+#define GLOW_STATE_LOW 0
+#define GLOW_STATE_RAMP_UP 1
+#define GLOW_STATE_HIGH 2
+#define GLOW_STATE_RAMP_DOWN 3
+
+#define GLOW_MIN_ALPHA 0.4
+#define GLOW_MAX_ALPHA 1.0
+
+//times are measured in 1/30 of a second
+#define GLOW_LOW_TIME 30
+#define GLOW_RAMP_UP_TIME 15
+#define GLOW_HIGH_TIME 10
+#define GLOW_RAMP_DOWN_TIME 15
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
+- (void)makeButtonRound:(UIButton*)button
+{
+    [button.layer setCornerRadius:(lowerButton.frame.size.width/8.0)];
+    button.layer.masksToBounds = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [bSlider setValue:[UIScreen mainScreen].brightness];
     currentValue = bSlider.value;
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self makeButtonRound:lowerButton];
+    [self makeButtonRound:higherButton];
+    [self makeButtonRound:fullButton];
+    glowImage.alpha = GLOW_MIN_ALPHA;
+    nGlowState = GLOW_STATE_LOW;
+    nGlowTimerTick = 0;
+    [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
+}
+
+-(void)glowtimerfunc:(NSTimer*)theTimer
+{
+    nGlowTimerTick++;
+    switch (nGlowState)
+    {
+        case GLOW_STATE_LOW:
+            if (nGlowTimerTick>=GLOW_LOW_TIME)
+            {
+                nGlowState = GLOW_STATE_RAMP_UP;
+                nGlowTimerTick = 0;
+            }
+            break;
+        case GLOW_STATE_RAMP_UP:
+            if (nGlowTimerTick>=GLOW_RAMP_UP_TIME)
+            {
+                nGlowState = GLOW_STATE_HIGH;
+                nGlowTimerTick = 0;
+                glowImage.alpha = GLOW_MAX_ALPHA;
+            }
+            else
+            {
+                glowImage.alpha = GLOW_MIN_ALPHA + (float)nGlowTimerTick/(float)GLOW_RAMP_UP_TIME*(GLOW_MAX_ALPHA-GLOW_MIN_ALPHA);
+            }
+            break;
+        case GLOW_STATE_HIGH:
+            if (nGlowTimerTick>=GLOW_HIGH_TIME)
+            {
+                nGlowState = GLOW_STATE_RAMP_DOWN;
+                nGlowTimerTick = 0;
+            }
+            break;
+        case GLOW_STATE_RAMP_DOWN:
+            if (nGlowTimerTick>=GLOW_RAMP_DOWN_TIME)
+            {
+                nGlowState = GLOW_STATE_LOW;
+                nGlowTimerTick = 0;
+                glowImage.alpha = GLOW_MIN_ALPHA;
+            }
+            else
+            {
+                glowImage.alpha = GLOW_MAX_ALPHA - (float)nGlowTimerTick/(float)GLOW_RAMP_DOWN_TIME*(GLOW_MAX_ALPHA-GLOW_MIN_ALPHA);
+            }
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,9 +107,22 @@
 }
 
 
+- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight || interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
+    {
+        backgroundView.image = [UIImage imageNamed:@"Default-Landscape.png"];
+    }
+    else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
+    {
+        backgroundView.image = [UIImage imageNamed:@"Default.png"];
+    }
 
-
+}
 
 
 
@@ -57,17 +143,29 @@
         [UIScreen mainScreen].brightness = bSlider.value;
         currentValue = bSlider.value;
     }
+    
+    [sender performSelector:@selector(checkHighlight:) withObject:sender afterDelay:0];
 }
 
 - (IBAction)bUpAct:(id)sender {
     [bSlider setValue:bSlider.value + 0.1];
     [UIScreen mainScreen].brightness = bSlider.value;
     currentValue = bSlider.value;
+    [sender performSelector:@selector(checkHighlight:) withObject:sender afterDelay:0];
 }
 
 - (IBAction)bDownAct:(id)sender {
     [bSlider setValue:bSlider.value - 0.1];
     [UIScreen mainScreen].brightness = bSlider.value;
     currentValue = bSlider.value;
+    [sender performSelector:@selector(checkHighlight:) withObject:sender afterDelay:0];
+}
+- (void)viewDidUnload {
+    lowerButton = nil;
+    higherButton = nil;
+    fullButton = nil;
+    backgroundView = nil;
+    glowImage = nil;
+    [super viewDidUnload];
 }
 @end

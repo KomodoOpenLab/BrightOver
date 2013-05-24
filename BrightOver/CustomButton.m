@@ -20,11 +20,18 @@
 }
 
 - (void)accessibilityElementDidBecomeFocused {
-    [self setBackgroundImage:[UIImage imageNamed:@"highlightedButton.png"] forState:UIControlStateNormal];
+    //[self setBackgroundImage:[UIImage imageNamed:@"highlightedButton.png"] forState:UIControlStateNormal];
+    self.highlighted = YES;
 }
 
 - (void)accessibilityElementDidLoseFocus {
-    [self setBackgroundImage:[UIImage imageNamed:@"normalButton.png"] forState:UIControlStateNormal];
+    //[self setBackgroundImage:[UIImage imageNamed:@"normalButton.png"] forState:UIControlStateNormal];
+    self.highlighted = NO;
+}
+
+- (void)checkHighlight:(id)btn
+{
+        self.highlighted = [self accessibilityElementIsFocused];
 }
 
 @end
