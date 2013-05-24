@@ -25,10 +25,6 @@
 		5A0DCB4816AB27A700B9D26E /* BrightOverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCB4716AB27A700B9D26E /* BrightOverTests.m */; };
 		5A2BDF1116F266DA008D38B1 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1016F266DA008D38B1 /* CustomButton.m */; };
 		5A2BDF1816F2696A008D38B1 /* highlightedButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1216F2696A008D38B1 /* highlightedButton.png */; };
-		5A2BDF1916F2696A008D38B1 /* icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1316F2696A008D38B1 /* icon-ipad.png */; };
-		5A2BDF1A16F2696A008D38B1 /* icon-ipad-ret.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1416F2696A008D38B1 /* icon-ipad-ret.png */; };
-		5A2BDF1B16F2696A008D38B1 /* icon-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1516F2696A008D38B1 /* icon-iphone.png */; };
-		5A2BDF1C16F2696A008D38B1 /* icon-iphone-ret.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1616F2696A008D38B1 /* icon-iphone-ret.png */; };
 		5A2BDF1D16F2696A008D38B1 /* normalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDF1716F2696A008D38B1 /* normalButton.png */; };
 		F056C5C9174F9C6400523565 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F056C5C5174F9C6400523565 /* Icon-Small-50.png */; };
 		F056C5CA174F9C6400523565 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F056C5C6174F9C6400523565 /* Icon-Small-50@2x.png */; };
@@ -91,10 +87,6 @@
 		5A2BDF0F16F266DA008D38B1 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		5A2BDF1016F266DA008D38B1 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		5A2BDF1216F2696A008D38B1 /* highlightedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highlightedButton.png; sourceTree = "<group>"; };
-		5A2BDF1316F2696A008D38B1 /* icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ipad.png"; sourceTree = "<group>"; };
-		5A2BDF1416F2696A008D38B1 /* icon-ipad-ret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ipad-ret.png"; sourceTree = "<group>"; };
-		5A2BDF1516F2696A008D38B1 /* icon-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iphone.png"; sourceTree = "<group>"; };
-		5A2BDF1616F2696A008D38B1 /* icon-iphone-ret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iphone-ret.png"; sourceTree = "<group>"; };
 		5A2BDF1716F2696A008D38B1 /* normalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalButton.png; sourceTree = "<group>"; };
 		F056C5C5174F9C6400523565 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		F056C5C6174F9C6400523565 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
@@ -197,10 +189,6 @@
 				F09699DF174F96DC002CF3A9 /* program icons */,
 				F09699DE174F9267002CF3A9 /* backgrounds */,
 				F09699DD174F920C002CF3A9 /* button icons */,
-				5A2BDF1316F2696A008D38B1 /* icon-ipad.png */,
-				5A2BDF1416F2696A008D38B1 /* icon-ipad-ret.png */,
-				5A2BDF1516F2696A008D38B1 /* icon-iphone.png */,
-				5A2BDF1616F2696A008D38B1 /* icon-iphone-ret.png */,
 				5A0DCB1B16AB27A600B9D26E /* BrightOver-Info.plist */,
 				5A0DCB1C16AB27A600B9D26E /* InfoPlist.strings */,
 				5A0DCB1F16AB27A600B9D26E /* main.m */,
@@ -353,10 +341,6 @@
 				5A0DCB2D16AB27A700B9D26E /* MainStoryboard_iPhone.storyboard in Resources */,
 				5A0DCB3016AB27A700B9D26E /* MainStoryboard_iPad.storyboard in Resources */,
 				5A2BDF1816F2696A008D38B1 /* highlightedButton.png in Resources */,
-				5A2BDF1916F2696A008D38B1 /* icon-ipad.png in Resources */,
-				5A2BDF1A16F2696A008D38B1 /* icon-ipad-ret.png in Resources */,
-				5A2BDF1B16F2696A008D38B1 /* icon-iphone.png in Resources */,
-				5A2BDF1C16F2696A008D38B1 /* icon-iphone-ret.png in Resources */,
 				5A2BDF1D16F2696A008D38B1 /* normalButton.png in Resources */,
 				F0A10EF4174E486A009E001D /* brightover_icons_ipad_down.png in Resources */,
 				F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */,
