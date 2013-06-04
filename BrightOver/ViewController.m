@@ -30,7 +30,7 @@
 
 - (void)makeButtonRound:(UIButton*)button
 {
-    [button.layer setCornerRadius:(lowerButton.frame.size.width/8.0)];
+    [button.layer setCornerRadius:(button.frame.size.width/8.0)];
     button.layer.masksToBounds = YES;
 }
 
@@ -166,6 +166,7 @@
     fullButton = nil;
     backgroundView = nil;
     glowImage = nil;
+    fullButton = nil;
     [super viewDidUnload];
 }
 @end
