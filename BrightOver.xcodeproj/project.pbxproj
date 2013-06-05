@@ -13,8 +13,6 @@
 		5A0DCB1E16AB27A600B9D26E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCB1C16AB27A600B9D26E /* InfoPlist.strings */; };
 		5A0DCB2016AB27A600B9D26E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCB1F16AB27A600B9D26E /* main.m */; };
 		5A0DCB2416AB27A600B9D26E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCB2316AB27A600B9D26E /* AppDelegate.m */; };
-		5A0DCB2616AB27A600B9D26E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCB2516AB27A600B9D26E /* Default.png */; };
-		5A0DCB2A16AB27A700B9D26E /* Default~iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCB2916AB27A700B9D26E /* Default~iphone-568h@2x.png */; };
 		5A0DCB2D16AB27A700B9D26E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCB2B16AB27A700B9D26E /* MainStoryboard_iPhone.storyboard */; };
 		5A0DCB3016AB27A700B9D26E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCB2E16AB27A700B9D26E /* MainStoryboard_iPad.storyboard */; };
 		5A0DCB3316AB27A700B9D26E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCB3216AB27A700B9D26E /* ViewController.m */; };
@@ -32,11 +30,34 @@
 		F056C5CC174F9C6400523565 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F056C5C8174F9C6400523565 /* Icon-Small@2x.png */; };
 		F056C5DB174FAC0B00523565 /* brightness_glow_icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F056C5D9174FAC0B00523565 /* brightness_glow_icon_ipad.png */; };
 		F056C5DC174FAC0B00523565 /* brightness_normal_icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F056C5DA174FAC0B00523565 /* brightness_normal_icon_ipad.png */; };
+		F08F833A175F6D6E004D05B0 /* brightness_normal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F8339175F6D6E004D05B0 /* brightness_normal_icon.png */; };
+		F08F833C175F6E27004D05B0 /* brightness_normal_icon_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F833B175F6E27004D05B0 /* brightness_normal_icon_ipad@2x.png */; };
+		F08F833E175F6E35004D05B0 /* brightness_glow_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F833D175F6E35004D05B0 /* brightness_glow_icon.png */; };
+		F08F8340175F6E59004D05B0 /* brightness_glow_icon_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F833F175F6E59004D05B0 /* brightness_glow_icon_ipad@2x.png */; };
+		F08F8343175F8B50004D05B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCB2516AB27A600B9D26E /* Default.png */; };
+		F08F8344175F8B55004D05B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D1174F9126002CF3A9 /* Default@2x.png */; };
+		F08F8345175F8B5B004D05B0 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF7174E6FCD009E001D /* Default-Landscape.png */; };
+		F08F8346175F8B5F004D05B0 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D0174F9126002CF3A9 /* Default-Landscape@2x.png */; };
+		F08F8347175F8B63004D05B0 /* iphonebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD4175E1973009B4A07 /* iphonebackground.png */; };
+		F08F8349175F9D32004D05B0 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F8348175F9D32004D05B0 /* Default@2x~iphone.png */; };
+		F08F834B175FB23D004D05B0 /* iphonebackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F834A175FB23D004D05B0 /* iphonebackground@2x.png */; };
+		F095DDDC175E2595009B4A07 /* brightover_icons_down_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD6175E2595009B4A07 /* brightover_icons_down_focused.png */; };
+		F095DDDD175E2595009B4A07 /* brightover_icons_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD7175E2595009B4A07 /* brightover_icons_down.png */; };
+		F095DDDE175E2595009B4A07 /* brightover_icons_full_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD8175E2595009B4A07 /* brightover_icons_full_focused.png */; };
+		F095DDDF175E2595009B4A07 /* brightover_icons_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD9175E2595009B4A07 /* brightover_icons_full.png */; };
+		F095DDE0175E2595009B4A07 /* brightover_icons_up_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDDA175E2595009B4A07 /* brightover_icons_up_focused.png */; };
+		F095DDE1175E2595009B4A07 /* brightover_icons_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDDB175E2595009B4A07 /* brightover_icons_up.png */; };
+		F095DDEA175E55D0009B4A07 /* brightover_icons_down_focused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE2175E55CF009B4A07 /* brightover_icons_down_focused@2x.png */; };
+		F095DDEB175E55D0009B4A07 /* brightover_icons_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE3175E55CF009B4A07 /* brightover_icons_down@2x.png */; };
+		F095DDEC175E55D0009B4A07 /* brightover_icons_full_focused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE4175E55CF009B4A07 /* brightover_icons_full_focused@2x.png */; };
+		F095DDED175E55D0009B4A07 /* brightover_icons_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE5175E55CF009B4A07 /* brightover_icons_full@2x.png */; };
+		F095DDEE175E55D0009B4A07 /* brightness_normal_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE6175E55CF009B4A07 /* brightness_normal_icon@2x.png */; };
+		F095DDEF175E55D0009B4A07 /* brightover_icons_up_focused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE7175E55CF009B4A07 /* brightover_icons_up_focused@2x.png */; };
+		F095DDF0175E55D0009B4A07 /* brightover_icons_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE8175E55CF009B4A07 /* brightover_icons_up@2x.png */; };
+		F095DDF1175E55D0009B4A07 /* brightness_glow_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDE9175E55D0009B4A07 /* brightness_glow_icon@2x.png */; };
 		F09699D5174F9126002CF3A9 /* brightover_icons_ipad_up_focused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699CD174F9125002CF3A9 /* brightover_icons_ipad_up_focused@2x.png */; };
 		F09699D6174F9126002CF3A9 /* brightover_icons_ipad_down_focused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699CE174F9125002CF3A9 /* brightover_icons_ipad_down_focused@2x.png */; };
 		F09699D7174F9126002CF3A9 /* brightover_icons_ipad_full_focused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699CF174F9126002CF3A9 /* brightover_icons_ipad_full_focused@2x.png */; };
-		F09699D8174F9126002CF3A9 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D0174F9126002CF3A9 /* Default-Landscape@2x.png */; };
-		F09699D9174F9126002CF3A9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D1174F9126002CF3A9 /* Default@2x.png */; };
 		F09699DA174F9126002CF3A9 /* brightover_icons_ipad_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D2174F9126002CF3A9 /* brightover_icons_ipad_down@2x.png */; };
 		F09699DB174F9126002CF3A9 /* brightover_icons_ipad_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D3174F9126002CF3A9 /* brightover_icons_ipad_full@2x.png */; };
 		F09699DC174F9126002CF3A9 /* brightover_icons_ipad_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09699D4174F9126002CF3A9 /* brightover_icons_ipad_up@2x.png */; };
@@ -47,7 +68,6 @@
 		F0A10EF4174E486A009E001D /* brightover_icons_ipad_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF1174E486A009E001D /* brightover_icons_ipad_down.png */; };
 		F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */; };
 		F0A10EF6174E486A009E001D /* brightover_icons_ipad_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */; };
-		F0A10EF8174E6FCD009E001D /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EF7174E6FCD009E001D /* Default-Landscape.png */; };
 		F0A10F02174EA452009E001D /* brightover_icons_ipad_down_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10EFF174EA452009E001D /* brightover_icons_ipad_down_focused.png */; };
 		F0A10F03174EA452009E001D /* brightover_icons_ipad_up_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10F00174EA452009E001D /* brightover_icons_ipad_up_focused.png */; };
 		F0A10F04174EA452009E001D /* brightover_icons_ipad_full_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A10F01174EA452009E001D /* brightover_icons_ipad_full_focused.png */; };
@@ -75,7 +95,6 @@
 		5A0DCB2216AB27A600B9D26E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A0DCB2316AB27A600B9D26E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A0DCB2516AB27A600B9D26E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5A0DCB2916AB27A700B9D26E /* Default~iphone-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone-568h@2x.png"; sourceTree = "<group>"; };
 		5A0DCB2C16AB27A700B9D26E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		5A0DCB2F16AB27A700B9D26E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		5A0DCB3116AB27A700B9D26E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -96,6 +115,27 @@
 		F056C5C8174F9C6400523565 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		F056C5D9174FAC0B00523565 /* brightness_glow_icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightness_glow_icon_ipad.png; sourceTree = "<group>"; };
 		F056C5DA174FAC0B00523565 /* brightness_normal_icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightness_normal_icon_ipad.png; sourceTree = "<group>"; };
+		F08F8339175F6D6E004D05B0 /* brightness_normal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightness_normal_icon.png; sourceTree = "<group>"; };
+		F08F833B175F6E27004D05B0 /* brightness_normal_icon_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightness_normal_icon_ipad@2x.png"; sourceTree = "<group>"; };
+		F08F833D175F6E35004D05B0 /* brightness_glow_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightness_glow_icon.png; sourceTree = "<group>"; };
+		F08F833F175F6E59004D05B0 /* brightness_glow_icon_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightness_glow_icon_ipad@2x.png"; sourceTree = "<group>"; };
+		F08F8348175F9D32004D05B0 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
+		F08F834A175FB23D004D05B0 /* iphonebackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphonebackground@2x.png"; sourceTree = "<group>"; };
+		F095DDD4175E1973009B4A07 /* iphonebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphonebackground.png; sourceTree = "<group>"; };
+		F095DDD6175E2595009B4A07 /* brightover_icons_down_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_down_focused.png; sourceTree = "<group>"; };
+		F095DDD7175E2595009B4A07 /* brightover_icons_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_down.png; sourceTree = "<group>"; };
+		F095DDD8175E2595009B4A07 /* brightover_icons_full_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_full_focused.png; sourceTree = "<group>"; };
+		F095DDD9175E2595009B4A07 /* brightover_icons_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_full.png; sourceTree = "<group>"; };
+		F095DDDA175E2595009B4A07 /* brightover_icons_up_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_up_focused.png; sourceTree = "<group>"; };
+		F095DDDB175E2595009B4A07 /* brightover_icons_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_up.png; sourceTree = "<group>"; };
+		F095DDE2175E55CF009B4A07 /* brightover_icons_down_focused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_down_focused@2x.png"; sourceTree = "<group>"; };
+		F095DDE3175E55CF009B4A07 /* brightover_icons_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_down@2x.png"; sourceTree = "<group>"; };
+		F095DDE4175E55CF009B4A07 /* brightover_icons_full_focused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_full_focused@2x.png"; sourceTree = "<group>"; };
+		F095DDE5175E55CF009B4A07 /* brightover_icons_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_full@2x.png"; sourceTree = "<group>"; };
+		F095DDE6175E55CF009B4A07 /* brightness_normal_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightness_normal_icon@2x.png"; sourceTree = "<group>"; };
+		F095DDE7175E55CF009B4A07 /* brightover_icons_up_focused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_up_focused@2x.png"; sourceTree = "<group>"; };
+		F095DDE8175E55CF009B4A07 /* brightover_icons_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_up@2x.png"; sourceTree = "<group>"; };
+		F095DDE9175E55D0009B4A07 /* brightness_glow_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightness_glow_icon@2x.png"; sourceTree = "<group>"; };
 		F09699CD174F9125002CF3A9 /* brightover_icons_ipad_up_focused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_ipad_up_focused@2x.png"; sourceTree = "<group>"; };
 		F09699CE174F9125002CF3A9 /* brightover_icons_ipad_down_focused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_ipad_down_focused@2x.png"; sourceTree = "<group>"; };
 		F09699CF174F9126002CF3A9 /* brightover_icons_ipad_full_focused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightover_icons_ipad_full_focused@2x.png"; sourceTree = "<group>"; };
@@ -224,8 +264,14 @@
 		F056C5D8174FABE200523565 /* brightness image */ = {
 			isa = PBXGroup;
 			children = (
-				F056C5D9174FAC0B00523565 /* brightness_glow_icon_ipad.png */,
+				F08F8339175F6D6E004D05B0 /* brightness_normal_icon.png */,
+				F095DDE6175E55CF009B4A07 /* brightness_normal_icon@2x.png */,
 				F056C5DA174FAC0B00523565 /* brightness_normal_icon_ipad.png */,
+				F08F833B175F6E27004D05B0 /* brightness_normal_icon_ipad@2x.png */,
+				F08F833D175F6E35004D05B0 /* brightness_glow_icon.png */,
+				F095DDE9175E55D0009B4A07 /* brightness_glow_icon@2x.png */,
+				F056C5D9174FAC0B00523565 /* brightness_glow_icon_ipad.png */,
+				F08F833F175F6E59004D05B0 /* brightness_glow_icon_ipad@2x.png */,
 			);
 			name = "brightness image";
 			sourceTree = "<group>";
@@ -235,14 +281,26 @@
 			children = (
 				5A2BDF1716F2696A008D38B1 /* normalButton.png */,
 				5A2BDF1216F2696A008D38B1 /* highlightedButton.png */,
+				F095DDD7175E2595009B4A07 /* brightover_icons_down.png */,
+				F095DDE3175E55CF009B4A07 /* brightover_icons_down@2x.png */,
+				F095DDD6175E2595009B4A07 /* brightover_icons_down_focused.png */,
+				F095DDE2175E55CF009B4A07 /* brightover_icons_down_focused@2x.png */,
 				F0A10EF1174E486A009E001D /* brightover_icons_ipad_down.png */,
 				F09699D2174F9126002CF3A9 /* brightover_icons_ipad_down@2x.png */,
 				F0A10EFF174EA452009E001D /* brightover_icons_ipad_down_focused.png */,
 				F09699CE174F9125002CF3A9 /* brightover_icons_ipad_down_focused@2x.png */,
+				F095DDDB175E2595009B4A07 /* brightover_icons_up.png */,
+				F095DDE8175E55CF009B4A07 /* brightover_icons_up@2x.png */,
+				F095DDDA175E2595009B4A07 /* brightover_icons_up_focused.png */,
+				F095DDE7175E55CF009B4A07 /* brightover_icons_up_focused@2x.png */,
 				F0A10EF3174E486A009E001D /* brightover_icons_ipad_up.png */,
 				F09699D4174F9126002CF3A9 /* brightover_icons_ipad_up@2x.png */,
 				F0A10F00174EA452009E001D /* brightover_icons_ipad_up_focused.png */,
 				F09699CD174F9125002CF3A9 /* brightover_icons_ipad_up_focused@2x.png */,
+				F095DDD9175E2595009B4A07 /* brightover_icons_full.png */,
+				F095DDE5175E55CF009B4A07 /* brightover_icons_full@2x.png */,
+				F095DDD8175E2595009B4A07 /* brightover_icons_full_focused.png */,
+				F095DDE4175E55CF009B4A07 /* brightover_icons_full_focused@2x.png */,
 				F0A10EF2174E486A009E001D /* brightover_icons_ipad_full.png */,
 				F09699D3174F9126002CF3A9 /* brightover_icons_ipad_full@2x.png */,
 				F0A10F01174EA452009E001D /* brightover_icons_ipad_full_focused.png */,
@@ -258,7 +316,9 @@
 				F09699D1174F9126002CF3A9 /* Default@2x.png */,
 				F0A10EF7174E6FCD009E001D /* Default-Landscape.png */,
 				F09699D0174F9126002CF3A9 /* Default-Landscape@2x.png */,
-				5A0DCB2916AB27A700B9D26E /* Default~iphone-568h@2x.png */,
+				F08F8348175F9D32004D05B0 /* Default@2x~iphone.png */,
+				F095DDD4175E1973009B4A07 /* iphonebackground.png */,
+				F08F834A175FB23D004D05B0 /* iphonebackground@2x.png */,
 			);
 			name = backgrounds;
 			sourceTree = "<group>";
@@ -350,8 +410,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A0DCB1E16AB27A600B9D26E /* InfoPlist.strings in Resources */,
-				5A0DCB2616AB27A600B9D26E /* Default.png in Resources */,
-				5A0DCB2A16AB27A700B9D26E /* Default~iphone-568h@2x.png in Resources */,
 				5A0DCB2D16AB27A700B9D26E /* MainStoryboard_iPhone.storyboard in Resources */,
 				5A0DCB3016AB27A700B9D26E /* MainStoryboard_iPad.storyboard in Resources */,
 				5A2BDF1816F2696A008D38B1 /* highlightedButton.png in Resources */,
@@ -359,15 +417,12 @@
 				F0A10EF4174E486A009E001D /* brightover_icons_ipad_down.png in Resources */,
 				F0A10EF5174E486A009E001D /* brightover_icons_ipad_full.png in Resources */,
 				F0A10EF6174E486A009E001D /* brightover_icons_ipad_up.png in Resources */,
-				F0A10EF8174E6FCD009E001D /* Default-Landscape.png in Resources */,
 				F0A10F02174EA452009E001D /* brightover_icons_ipad_down_focused.png in Resources */,
 				F0A10F03174EA452009E001D /* brightover_icons_ipad_up_focused.png in Resources */,
 				F0A10F04174EA452009E001D /* brightover_icons_ipad_full_focused.png in Resources */,
 				F09699D5174F9126002CF3A9 /* brightover_icons_ipad_up_focused@2x.png in Resources */,
 				F09699D6174F9126002CF3A9 /* brightover_icons_ipad_down_focused@2x.png in Resources */,
 				F09699D7174F9126002CF3A9 /* brightover_icons_ipad_full_focused@2x.png in Resources */,
-				F09699D8174F9126002CF3A9 /* Default-Landscape@2x.png in Resources */,
-				F09699D9174F9126002CF3A9 /* Default@2x.png in Resources */,
 				F09699DA174F9126002CF3A9 /* brightover_icons_ipad_down@2x.png in Resources */,
 				F09699DB174F9126002CF3A9 /* brightover_icons_ipad_full@2x.png in Resources */,
 				F09699DC174F9126002CF3A9 /* brightover_icons_ipad_up@2x.png in Resources */,
@@ -381,6 +436,31 @@
 				F056C5CC174F9C6400523565 /* Icon-Small@2x.png in Resources */,
 				F056C5DB174FAC0B00523565 /* brightness_glow_icon_ipad.png in Resources */,
 				F056C5DC174FAC0B00523565 /* brightness_normal_icon_ipad.png in Resources */,
+				F095DDDC175E2595009B4A07 /* brightover_icons_down_focused.png in Resources */,
+				F095DDDD175E2595009B4A07 /* brightover_icons_down.png in Resources */,
+				F095DDDE175E2595009B4A07 /* brightover_icons_full_focused.png in Resources */,
+				F095DDDF175E2595009B4A07 /* brightover_icons_full.png in Resources */,
+				F095DDE0175E2595009B4A07 /* brightover_icons_up_focused.png in Resources */,
+				F095DDE1175E2595009B4A07 /* brightover_icons_up.png in Resources */,
+				F095DDEA175E55D0009B4A07 /* brightover_icons_down_focused@2x.png in Resources */,
+				F095DDEB175E55D0009B4A07 /* brightover_icons_down@2x.png in Resources */,
+				F095DDEC175E55D0009B4A07 /* brightover_icons_full_focused@2x.png in Resources */,
+				F095DDED175E55D0009B4A07 /* brightover_icons_full@2x.png in Resources */,
+				F095DDEE175E55D0009B4A07 /* brightness_normal_icon@2x.png in Resources */,
+				F095DDEF175E55D0009B4A07 /* brightover_icons_up_focused@2x.png in Resources */,
+				F095DDF0175E55D0009B4A07 /* brightover_icons_up@2x.png in Resources */,
+				F095DDF1175E55D0009B4A07 /* brightness_glow_icon@2x.png in Resources */,
+				F08F833A175F6D6E004D05B0 /* brightness_normal_icon.png in Resources */,
+				F08F833C175F6E27004D05B0 /* brightness_normal_icon_ipad@2x.png in Resources */,
+				F08F833E175F6E35004D05B0 /* brightness_glow_icon.png in Resources */,
+				F08F8340175F6E59004D05B0 /* brightness_glow_icon_ipad@2x.png in Resources */,
+				F08F8343175F8B50004D05B0 /* Default.png in Resources */,
+				F08F8344175F8B55004D05B0 /* Default@2x.png in Resources */,
+				F08F8345175F8B5B004D05B0 /* Default-Landscape.png in Resources */,
+				F08F8346175F8B5F004D05B0 /* Default-Landscape@2x.png in Resources */,
+				F08F8347175F8B63004D05B0 /* iphonebackground.png in Resources */,
+				F08F8349175F9D32004D05B0 /* Default@2x~iphone.png in Resources */,
+				F08F834B175FB23D004D05B0 /* iphonebackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +627,7 @@
 				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
 				INFOPLIST_FILE = "BrightOver/BrightOver-Info.plist";
 				PRODUCT_NAME = brightover;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -558,6 +639,7 @@
 				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
 				INFOPLIST_FILE = "BrightOver/BrightOver-Info.plist";
 				PRODUCT_NAME = brightover;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -632,6 +714,7 @@
 				GCC_PREFIX_HEADER = "BrightOver/BrightOver-Prefix.pch";
 				INFOPLIST_FILE = "BrightOver/BrightOver-Info.plist";
 				PRODUCT_NAME = brightover;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
