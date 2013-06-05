@@ -121,7 +121,6 @@
     {
         backgroundView.image = [UIImage imageNamed:@"Default.png"];
     }
-
 }
 
 
