@@ -167,6 +167,8 @@
     backgroundView = nil;
     glowImage = nil;
     fullButton = nil;
+    bSlider = nil;
+    glowImage = nil;
     [super viewDidUnload];
 }
 @end

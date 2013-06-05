@@ -73,12 +73,21 @@
                                     <action selector="bFullAct:" destination="2" eventType="touchUpInside" id="5zR-7F-578"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brightness_normal_icon.png" id="xRk-Bl-onk">
+                                <rect key="frame" x="60" y="140" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brightness_glow_icon.png" id="ffX-sL-VXt">
+                                <rect key="frame" x="60" y="140" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="bSlider" destination="p7J-By-EZx" id="k2k-oX-F7D"/>
+                        <outlet property="bSlider" destination="p7J-By-EZx" id="rgi-JY-NE0"/>
                         <outlet property="fullButton" destination="E9j-MB-Eya" id="2kY-zP-LKe"/>
+                        <outlet property="glowImage" destination="ffX-sL-VXt" id="nWk-KY-n7V"/>
                         <outlet property="higherButton" destination="cyJ-SM-aSc" id="mvO-lt-Obj"/>
                         <outlet property="lowerButton" destination="9l3-FE-W04" id="JDu-9P-TSY"/>
                     </connections>
@@ -89,6 +98,8 @@
     </scenes>
     <resources>
         <image name="Default~iphone.png" width="320" height="480"/>
+        <image name="brightness_glow_icon.png" width="200" height="200"/>
+        <image name="brightness_normal_icon.png" width="200" height="200"/>
         <image name="brightover_icons_down.png" width="32" height="32"/>
         <image name="brightover_icons_down_focused.png" width="32" height="32"/>
         <image name="brightover_icons_full.png" width="32" height="32"/>
@@ -98,6 +109,26 @@
         <image name="highlightedButton.png" width="700" height="400"/>
         <image name="normalButton.png" width="700" height="400"/>
     </resources>
+    <classes>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bChanged:"/>
+                <relationship kind="action" name="bDownAct:"/>
+                <relationship kind="action" name="bFullAct:"/>
+                <relationship kind="action" name="bUpAct:"/>
+                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fullButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="glowImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="higherButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="lowerButton" candidateClass="CustomButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
