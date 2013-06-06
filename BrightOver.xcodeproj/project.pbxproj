@@ -41,6 +41,9 @@
 		F08F8347175F8B63004D05B0 /* iphonebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD4175E1973009B4A07 /* iphonebackground.png */; };
 		F08F8349175F9D32004D05B0 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F8348175F9D32004D05B0 /* Default@2x~iphone.png */; };
 		F08F834B175FB23D004D05B0 /* iphonebackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F08F834A175FB23D004D05B0 /* iphonebackground@2x.png */; };
+		F090836B1760BEBF007F15A3 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F090836A1760BEBF007F15A3 /* Default~iphone.png */; };
+		F090836E1760C5E4007F15A3 /* iphonebackground-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F090836C1760C5E3007F15A3 /* iphonebackground-landscape.png */; };
+		F090836F1760C5E4007F15A3 /* iphonebackground-landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F090836D1760C5E3007F15A3 /* iphonebackground-landscape@2x.png */; };
 		F095DDDC175E2595009B4A07 /* brightover_icons_down_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD6175E2595009B4A07 /* brightover_icons_down_focused.png */; };
 		F095DDDD175E2595009B4A07 /* brightover_icons_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD7175E2595009B4A07 /* brightover_icons_down.png */; };
 		F095DDDE175E2595009B4A07 /* brightover_icons_full_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = F095DDD8175E2595009B4A07 /* brightover_icons_full_focused.png */; };
@@ -121,6 +124,9 @@
 		F08F833F175F6E59004D05B0 /* brightness_glow_icon_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brightness_glow_icon_ipad@2x.png"; sourceTree = "<group>"; };
 		F08F8348175F9D32004D05B0 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
 		F08F834A175FB23D004D05B0 /* iphonebackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphonebackground@2x.png"; sourceTree = "<group>"; };
+		F090836A1760BEBF007F15A3 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		F090836C1760C5E3007F15A3 /* iphonebackground-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphonebackground-landscape.png"; sourceTree = "<group>"; };
+		F090836D1760C5E3007F15A3 /* iphonebackground-landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphonebackground-landscape@2x.png"; sourceTree = "<group>"; };
 		F095DDD4175E1973009B4A07 /* iphonebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphonebackground.png; sourceTree = "<group>"; };
 		F095DDD6175E2595009B4A07 /* brightover_icons_down_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_down_focused.png; sourceTree = "<group>"; };
 		F095DDD7175E2595009B4A07 /* brightover_icons_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightover_icons_down.png; sourceTree = "<group>"; };
@@ -316,9 +322,12 @@
 				F09699D1174F9126002CF3A9 /* Default@2x.png */,
 				F0A10EF7174E6FCD009E001D /* Default-Landscape.png */,
 				F09699D0174F9126002CF3A9 /* Default-Landscape@2x.png */,
+				F090836A1760BEBF007F15A3 /* Default~iphone.png */,
 				F08F8348175F9D32004D05B0 /* Default@2x~iphone.png */,
 				F095DDD4175E1973009B4A07 /* iphonebackground.png */,
 				F08F834A175FB23D004D05B0 /* iphonebackground@2x.png */,
+				F090836C1760C5E3007F15A3 /* iphonebackground-landscape.png */,
+				F090836D1760C5E3007F15A3 /* iphonebackground-landscape@2x.png */,
 			);
 			name = backgrounds;
 			sourceTree = "<group>";
@@ -461,6 +470,9 @@
 				F08F8347175F8B63004D05B0 /* iphonebackground.png in Resources */,
 				F08F8349175F9D32004D05B0 /* Default@2x~iphone.png in Resources */,
 				F08F834B175FB23D004D05B0 /* iphonebackground@2x.png in Resources */,
+				F090836B1760BEBF007F15A3 /* Default~iphone.png in Resources */,
+				F090836E1760C5E4007F15A3 /* iphonebackground-landscape.png in Resources */,
+				F090836F1760C5E4007F15A3 /* iphonebackground-landscape@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

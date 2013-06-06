@@ -22,11 +22,16 @@
 #define GLOW_HIGH_TIME 10
 #define GLOW_RAMP_DOWN_TIME 15
 
+//handy macro for determining if running on an iPad
+#define IS_IPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
 
 - (void)makeButtonRound:(UIButton*)button
 {
@@ -113,13 +118,27 @@
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
+    if (IS_IPAD)
     {
-        backgroundView.image = [UIImage imageNamed:@"Default-Landscape.png"];
+        if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
+        {
+            backgroundView.image = [UIImage imageNamed:@"Default-Landscape.png"];
+        }
+        else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
+        {
+            backgroundView.image = [UIImage imageNamed:@"Default.png"];
+        }
     }
-    else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
+    else //iphone
     {
-        backgroundView.image = [UIImage imageNamed:@"Default.png"];
+        if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
+        {
+            backgroundView.image = [UIImage imageNamed:@"iphonebackground.png"];
+        }
+        else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
+        {
+            backgroundView.image = [UIImage imageNamed:@"iphonebackground-landscape.png"];
+        }
     }
 }
 
