@@ -335,14 +335,14 @@
 		F09699DF174F96DC002CF3A9 /* program icons */ = {
 			isa = PBXGroup;
 			children = (
+				F09699E2174F9726002CF3A9 /* Icon.png */,
+				F09699E3174F9726002CF3A9 /* Icon@2x.png */,
+				F09699E0174F9726002CF3A9 /* Icon-72.png */,
+				F09699E1174F9726002CF3A9 /* Icon-72@2x.png */,
 				F056C5C5174F9C6400523565 /* Icon-Small-50.png */,
 				F056C5C6174F9C6400523565 /* Icon-Small-50@2x.png */,
 				F056C5C7174F9C6400523565 /* Icon-Small.png */,
 				F056C5C8174F9C6400523565 /* Icon-Small@2x.png */,
-				F09699E0174F9726002CF3A9 /* Icon-72.png */,
-				F09699E1174F9726002CF3A9 /* Icon-72@2x.png */,
-				F09699E2174F9726002CF3A9 /* Icon.png */,
-				F09699E3174F9726002CF3A9 /* Icon@2x.png */,
 			);
 			name = "program icons";
 			sourceTree = "<group>";
