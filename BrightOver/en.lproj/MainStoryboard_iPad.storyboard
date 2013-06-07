@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="Default.png" id="v7o-NA-LL8">
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="Default.png" id="v7o-NA-LL8">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -65,7 +65,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="tNw-ng-VYz" customClass="CustomButton">
                                 <rect key="frame" x="674" y="845" width="74" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Full brightness"/>
+                                <accessibility key="accessibilityConfiguration" label="Toggle full brightness"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="brightover_icons_ipad_full.png" backgroundImage="normalButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +95,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="bSlider" destination="EYJ-Cr-ZLp" id="MSX-90-q8U"/>
@@ -123,6 +122,26 @@
         <image name="highlightedButton.png" width="700" height="400"/>
         <image name="normalButton.png" width="700" height="400"/>
     </resources>
+    <classes>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bChanged:"/>
+                <relationship kind="action" name="bDownAct:"/>
+                <relationship kind="action" name="bFullAct:"/>
+                <relationship kind="action" name="bUpAct:"/>
+                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fullButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="glowImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="higherButton" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="lowerButton" candidateClass="CustomButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
