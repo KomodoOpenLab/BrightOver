@@ -38,5 +38,8 @@
 - (IBAction)bUpAct:(id)sender;
 - (IBAction)bDownAct:(id)sender;
 
+//forwards
+- (void)checkInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
+
 
 @end
