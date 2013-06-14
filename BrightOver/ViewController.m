@@ -54,6 +54,11 @@
     [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self checkInterfaceOrientation:self.interfaceOrientation];
+}
+
 -(void)glowtimerfunc:(NSTimer*)theTimer
 {
     nGlowTimerTick++;
@@ -116,7 +121,7 @@
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight || interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)checkInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     if (IS_IPAD)
     {
@@ -127,7 +132,7 @@
         }
         else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
         {
-            backgroundView.frame = CGRectMake(0, 0, 768, 1004);            
+            backgroundView.frame = CGRectMake(0, 0, 768, 1004);
             backgroundView.image = [UIImage imageNamed:@"Default.png"];
         }
     }
@@ -135,7 +140,7 @@
     {
         if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
         {
-            backgroundView.frame = CGRectMake(0, 0, 480, 320);            
+            backgroundView.frame = CGRectMake(0, 0, 480, 320);
             backgroundView.image = [UIImage imageNamed:@"iphonebackground-landscape.png"];
         }
         else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
@@ -144,6 +149,11 @@
             backgroundView.image = [UIImage imageNamed:@"iphonebackground.png"];
         }
     }
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self checkInterfaceOrientation:toInterfaceOrientation];
 }
 
 
