@@ -52,11 +52,23 @@
     nGlowState = GLOW_STATE_LOW;
     nGlowTimerTick = 0;
     [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusChanged:) name:AccessibilityElementFocusNotification object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementFocusNotification object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [self checkInterfaceOrientation:self.interfaceOrientation];
+}
+
+-(void)accessibilityFocusChanged:(NSNotification*)notification
+{
+    UIControl *control = (UIControl*)[notification object];
+    NSLog(@"ViewController> Accessibility focus changed");
 }
 
 -(void)glowtimerfunc:(NSTimer*)theTimer
