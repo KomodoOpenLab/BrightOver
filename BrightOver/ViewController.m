@@ -52,16 +52,23 @@
     nGlowState = GLOW_STATE_LOW;
     nGlowTimerTick = 0;
     [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusChanged:) name:AccessibilityElementFocusNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+    NSLog(@"viewDidDisappear");
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementFocusNotification object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"viewDidAppear");
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"viewWillAppear");
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusChanged:) name:AccessibilityElementFocusNotification object:nil];
     [self checkInterfaceOrientation:self.interfaceOrientation];
 }
 
