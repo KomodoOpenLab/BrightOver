@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/CALayer.h>
+#import "AccessibilityRedirectImage.h"
 #import "CustomButton.h"
 
 @interface ViewController : UIViewController
@@ -23,6 +24,7 @@
     __weak IBOutlet CustomButton *fullButton;
     __weak IBOutlet UIImageView *backgroundView;
     __weak IBOutlet UIImageView *glowImage;
+    __weak IBOutlet AccessibilityRedirectImage *accessibilityRedirect;
 	// variables
 	
     float currentValue;

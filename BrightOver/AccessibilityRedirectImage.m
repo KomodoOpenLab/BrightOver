@@ -21,5 +21,4 @@ extern NSString *AccessibilityElementFocusNotification;
     self.highlighted = NO;
 }
 
-
 @end

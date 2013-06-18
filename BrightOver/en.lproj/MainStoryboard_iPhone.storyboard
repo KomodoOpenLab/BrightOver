@@ -93,6 +93,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="accessibilityRedirect" destination="GCt-sF-c0Q" id="nVP-qW-G0W"/>
                         <outlet property="bSlider" destination="p7J-By-EZx" id="rgi-JY-NE0"/>
                         <outlet property="backgroundView" destination="U61-bk-zC2" id="pcC-D3-8hA"/>
                         <outlet property="fullButton" destination="E9j-MB-Eya" id="2kY-zP-LKe"/>
@@ -132,6 +133,7 @@
                 <relationship kind="action" name="bDownAct:"/>
                 <relationship kind="action" name="bFullAct:"/>
                 <relationship kind="action" name="bUpAct:"/>
+                <relationship kind="outlet" name="accessibilityRedirect" candidateClass="AccessibilityRedirectImage"/>
                 <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fullButton" candidateClass="CustomButton"/>
