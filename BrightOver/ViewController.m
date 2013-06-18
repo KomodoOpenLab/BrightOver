@@ -25,6 +25,12 @@
 //handy macro for determining if running on an iPad
 #define IS_IPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
 
 @interface ViewController ()
 
@@ -51,12 +57,66 @@
     glowImage.alpha = GLOW_MIN_ALPHA;
     nGlowState = GLOW_STATE_LOW;
     nGlowTimerTick = 0;
+    lastControlWithFocus = nil;
     [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    NSLog(@"viewDidDisappear");
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementFocusNotification object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"viewDidAppear");
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"viewWillAppear");
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusChanged:) name:AccessibilityElementFocusNotification object:nil];
     [self checkInterfaceOrientation:self.interfaceOrientation];
+}
+
+-(void)resetAccessibilityTrap
+{
+    accessibilityRedirect.isAccessibilityElement = YES;
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+}
+
+-(void)shiftFocusToMostRecentControl
+{
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0"))
+    {
+        if (lastControlWithFocus!=nil)
+        {
+            NSLog(@"shifting focus programmatically");
+            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, lastControlWithFocus);
+        }
+    }
+    else
+    {
+        NSLog(@"incompatible device, using oldschool method");
+        accessibilityRedirect.isAccessibilityElement = NO;
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+        [self performSelector:@selector(resetAccessibilityTrap) withObject:nil afterDelay:1.5];
+    }
+}
+
+-(void)accessibilityFocusChanged:(NSNotification*)notification
+{
+    UIControl *control = (UIControl*)[notification object];
+    NSLog(@"ViewController> Accessibility focus changed");
+    if (control==lowerButton||control==higherButton||control==fullButton)
+    {
+        NSLog(@"setting last control with focus");
+        lastControlWithFocus = control;
+    }
+    else
+    {
+        [self performSelector:@selector(shiftFocusToMostRecentControl) withObject:nil afterDelay:0];
+    }
 }
 
 -(void)glowtimerfunc:(NSTimer*)theTimer
@@ -201,6 +261,8 @@
     fullButton = nil;
     bSlider = nil;
     glowImage = nil;
+    accessibilityRedirect = nil;
+    accessibilityRedirect = nil;
     [super viewDidUnload];
 }
 @end

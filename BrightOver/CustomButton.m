@@ -8,6 +8,8 @@
 
 #import "CustomButton.h"
 
+NSString *AccessibilityElementFocusNotification = @"AccessibilityElementFocusNotification";
+
 @implementation CustomButton
 
 - (id)initWithFrame:(CGRect)frame
@@ -20,12 +22,11 @@
 }
 
 - (void)accessibilityElementDidBecomeFocused {
-    //[self setBackgroundImage:[UIImage imageNamed:@"highlightedButton.png"] forState:UIControlStateNormal];
+    [[NSNotificationCenter defaultCenter] postNotificationName:AccessibilityElementFocusNotification object:self userInfo:nil];
     self.highlighted = YES;
 }
 
 - (void)accessibilityElementDidLoseFocus {
-    //[self setBackgroundImage:[UIImage imageNamed:@"normalButton.png"] forState:UIControlStateNormal];
     self.highlighted = NO;
 }
 
