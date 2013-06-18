@@ -15,7 +15,6 @@ extern NSString *AccessibilityElementFocusNotification;
 
 - (void)accessibilityElementDidBecomeFocused {
     [[NSNotificationCenter defaultCenter] postNotificationName:AccessibilityElementFocusNotification object:self userInfo:nil];
-    NSLog(@"AccessibilityRedirect");
 }
 
 - (void)accessibilityElementDidLoseFocus {

@@ -51,6 +51,7 @@
     glowImage.alpha = GLOW_MIN_ALPHA;
     nGlowState = GLOW_STATE_LOW;
     nGlowTimerTick = 0;
+    lastControlWithFocus = nil;
     [NSTimer scheduledTimerWithTimeInterval:(1.0/30.0) target:self selector:@selector(glowtimerfunc:) userInfo:nil repeats:YES];
 }
 
@@ -72,10 +73,28 @@
     [self checkInterfaceOrientation:self.interfaceOrientation];
 }
 
+-(void)shiftFocusToMostRecentControl
+{
+    if (lastControlWithFocus!=nil)
+    {
+        NSLog(@"shifting focus programmatically");
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, lastControlWithFocus);
+    }
+}
+
 -(void)accessibilityFocusChanged:(NSNotification*)notification
 {
     UIControl *control = (UIControl*)[notification object];
     NSLog(@"ViewController> Accessibility focus changed");
+    if (control==lowerButton||control==higherButton||control==fullButton)
+    {
+        NSLog(@"setting last control with focus");
+        lastControlWithFocus = control;
+    }
+    else
+    {
+        [self performSelector:@selector(shiftFocusToMostRecentControl) withObject:nil afterDelay:0];
+    }
 }
 
 -(void)glowtimerfunc:(NSTimer*)theTimer

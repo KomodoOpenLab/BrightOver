@@ -26,7 +26,7 @@
 	// variables
 	
     float currentValue;
-	
+	UIControl* lastControlWithFocus;
 	
 }
 
