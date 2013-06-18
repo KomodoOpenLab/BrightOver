@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *AccessibilityElementFocusNotification;
+
 @interface CustomButton : UIButton
 
 @end
