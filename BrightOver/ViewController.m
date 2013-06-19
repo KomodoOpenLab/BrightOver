@@ -65,6 +65,7 @@
 {
     NSLog(@"viewDidDisappear");
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementFocusNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementLostFocusNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -76,13 +77,28 @@
 {
     NSLog(@"viewWillAppear");
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusChanged:) name:AccessibilityElementFocusNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusLost:) name:AccessibilityElementLostFocusNotification object:nil];
     [self checkInterfaceOrientation:self.interfaceOrientation];
 }
 
--(void)resetAccessibilityTrap
+-(void)enableCatchAllControl:(BOOL)bEn
 {
-    accessibilityRedirect.isAccessibilityElement = YES;
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+    if (bEn)
+    {
+        if (!(accessibilityRedirect.isAccessibilityElement))
+        {
+            accessibilityRedirect.isAccessibilityElement = YES;
+            //UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+        }
+    }
+    else
+    {
+        if (accessibilityRedirect.isAccessibilityElement)
+        {
+            accessibilityRedirect.isAccessibilityElement = NO;
+            //UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+        }
+    }
 }
 
 -(void)shiftFocusToMostRecentControl
@@ -100,20 +116,35 @@
         NSLog(@"incompatible device, using oldschool method");
         accessibilityRedirect.isAccessibilityElement = NO;
         UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
-        [self performSelector:@selector(resetAccessibilityTrap) withObject:nil afterDelay:1.5];
     }
+}
+
+-(void)checkForLossOfAccessibilityFocus
+{
+    NSLog(@"check for loss of acccessibility focus");
+    //if none of our controls is focused, we can assume that focus has shifted to someplace inaccessible like the status bar.  enable the catchall
+    if ( !([lowerButton accessibilityElementIsFocused] || [higherButton accessibilityElementIsFocused] || [fullButton accessibilityElementIsFocused]))
+    {
+        [self enableCatchAllControl:YES];
+    }
+}
+
+-(void)accessibilityFocusLost:(NSNotification*)notification
+{
+    [self performSelector:@selector(checkForLossOfAccessibilityFocus) withObject:nil afterDelay:1.5];
 }
 
 -(void)accessibilityFocusChanged:(NSNotification*)notification
 {
-    UIControl *control = (UIControl*)[notification object];
+    UIView *control = (UIView*)[notification object];
     NSLog(@"ViewController> Accessibility focus changed");
     if (control==lowerButton||control==higherButton||control==fullButton)
     {
         NSLog(@"setting last control with focus");
         lastControlWithFocus = control;
+        [self enableCatchAllControl:NO];
     }
-    else
+    else if (control==accessibilityRedirect)
     {
         [self performSelector:@selector(shiftFocusToMostRecentControl) withObject:nil afterDelay:0];
     }
