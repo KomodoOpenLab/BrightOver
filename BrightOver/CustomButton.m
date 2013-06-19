@@ -9,6 +9,7 @@
 #import "CustomButton.h"
 
 NSString *AccessibilityElementFocusNotification = @"AccessibilityElementFocusNotification";
+NSString *AccessibilityElementLostFocusNotification = @"AccessibilityElementLostFocusNotification";
 
 @implementation CustomButton
 
@@ -27,12 +28,13 @@ NSString *AccessibilityElementFocusNotification = @"AccessibilityElementFocusNot
 }
 
 - (void)accessibilityElementDidLoseFocus {
+    [[NSNotificationCenter defaultCenter] postNotificationName:AccessibilityElementLostFocusNotification object:self userInfo:nil];
     self.highlighted = NO;
 }
 
 - (void)checkHighlight:(id)btn
 {
-        self.highlighted = [self accessibilityElementIsFocused];
+    self.highlighted = [self accessibilityElementIsFocused];
 }
 
 @end

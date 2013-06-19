@@ -83,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="GCt-sF-c0Q" customClass="AccessibilityRedirectImage">
-                                <rect key="frame" x="6" y="443" width="308" height="10"/>
+                                <rect key="frame" x="0.0" y="443" width="319" height="10"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
