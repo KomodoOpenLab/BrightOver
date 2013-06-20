@@ -63,19 +63,12 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    NSLog(@"viewDidDisappear");
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementFocusNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AccessibilityElementLostFocusNotification object:nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    NSLog(@"viewDidAppear");
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"viewWillAppear");
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusChanged:) name:AccessibilityElementFocusNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(accessibilityFocusLost:) name:AccessibilityElementLostFocusNotification object:nil];
     [self checkInterfaceOrientation:self.interfaceOrientation];
@@ -88,7 +81,6 @@
         if (!(accessibilityRedirect.isAccessibilityElement))
         {
             accessibilityRedirect.isAccessibilityElement = YES;
-            //UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
         }
     }
     else
@@ -96,7 +88,6 @@
         if (accessibilityRedirect.isAccessibilityElement)
         {
             accessibilityRedirect.isAccessibilityElement = NO;
-            //UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
         }
     }
 }
