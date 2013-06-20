@@ -123,6 +123,23 @@
         <image name="highlightedButton.png" width="700" height="400"/>
         <image name="normalButton.png" width="700" height="400"/>
     </resources>
+    <classes>
+        <class className="AccessibilityRedirectImage" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccessibilityRedirectImage.h"/>
+        </class>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bChanged:"/>
+                <relationship kind="action" name="bDownAct:"/>
+                <relationship kind="action" name="bFullAct:"/>
+                <relationship kind="action" name="bUpAct:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
