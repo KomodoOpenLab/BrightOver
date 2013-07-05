@@ -220,15 +220,18 @@
     }
     else //iphone
     {
+        CGRect rectScreen = [UIScreen mainScreen].bounds;
+        BOOL biPhone5 = rectScreen.size.height == 568;
+        
         if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)
         {
-            backgroundView.frame = CGRectMake(0, 0, 480, 320);
-            backgroundView.image = [UIImage imageNamed:@"iphonebackground-landscape.png"];
+            backgroundView.frame = biPhone5 ? CGRectMake(0, 0, 548, 320) : CGRectMake(0, 0, 480, 320);
+            backgroundView.image = biPhone5 ? [UIImage imageNamed:@"iphonebackground-landscape-568h.png"] : [UIImage imageNamed:@"iphonebackground-landscape.png"];
         }
         else if (toInterfaceOrientation==UIInterfaceOrientationPortrait || toInterfaceOrientation==UIInterfaceOrientationPortraitUpsideDown)
         {
-            backgroundView.frame = CGRectMake(0,0,320,460);
-            backgroundView.image = [UIImage imageNamed:@"iphonebackground.png"];
+            backgroundView.frame = biPhone5 ? CGRectMake(0,0,320,548) : CGRectMake(0,0,320,460); //20 pixels less because of status bar
+            backgroundView.image = biPhone5 ? [UIImage imageNamed:@"iphonebackground-568h.png"] : [UIImage imageNamed:@"iphonebackground.png"];
         }
     }
 }
